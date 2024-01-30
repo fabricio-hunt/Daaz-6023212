@@ -1,31 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/assets/index.css" media="screen" />
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    max-width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container .menu__daaz{
+    max-width: 100%;
+    height: 60px;
+    background: #FED5AF;
+}
+
+.main-container .menu__daaz img{
+    margin-left: 35px;
+    animation: jump 1s ease infinite;
+}
+
+.banner__principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.banner__principal p{
+    margin-left: 25px;
+    text-align: left;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.banner__principal img{
+    max-width: 80%;
+    height: auto;
+}
+
+.banner__secundario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.banner__secundario img{
+    width: 70%;
+    border-radius: 15px;
+    margin-left: 20px;
+
+}
+
+.bottom img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.bottom .imagem-sobreposta {
+    width: 25%;
+    position: absolute;
+    top: 165%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+
+@keyframes jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    .bottom .imagem-sobreposta {
+        width: 40%;
+        position: absolute;
+        top: 180%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .main-container{
+        box-sizing: border-box;
+        max-width: 100%;
+      }
+
+      .main-container .menu__daaz img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+      .banner__principal{
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 11px;        
+    }
+
+    .banner__principal p{
+        font-size: 15px;
+        text-align: center;
+        margin: 0 auto; 
+        width: 95%;       
+    }
+    
+   .main-container .banner__principal img{
+        margin-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .banner__secundario{
+        font-size: 15px;
+        margin-right: 15px;        
+    }
+    .bottom .imagem-sobreposta {
+       display: none;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .banner__secundario{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;      
+    }
+    .banner__secundario img{
+        margin-left: 42px;
+    }
+    .banner__secundario p{
+        width: 90%;
+        margin: 0 auto;
+    }
+  }
+    </style>
+
 </head>
 <body>
 
     <div class="main-container">
         <nav class="menu__daaz">
-            <img class="menu__daaz-imagem" src="/assets/imagens/flag-daaz.png" alt="logo daaz">
+            <img class="menu__daaz-imagem" src="https://static.bemol.com.br/pages/farma/conteudo-especial/daaz/6023212/assets/imagens/flag-daaz.png" alt="logo daaz">
         </nav>
     <section class="banner__principal">
         <div class="texto"> <p>Descubra a magia da pele radiante! Nosso Hidratante Facial, enriquecido com FPS 30, combina o poder da Vitamina C Nanoencapsulada, 
             estável e potente, com o Ácido Hialurônico. Esta fusão de ativos oferece uma proteção eficaz contra os raios UV enquanto hidrata profundamente. </p> </div>
-        <div class="img">  <img class="imagem-produto" src="/assets/imagens/creme-1-removebg-preview.png" alt="segunda-imagem">
+        <div class="img">  <img class="imagem-produto" src="https://static.bemol.com.br/pages/farma/conteudo-especial/daaz/6023212/assets/imagens/creme-1-removebg-preview.png" alt="segunda-imagem">
     </section> 
         <hr>
     <section class="banner__secundario">
-        <div class="img">  <img class="imagem-produto" src="/assets/imagens/retrato-de-uma-linda-mulher-sorridente-com-pele-limpa.jpg" alt="segunda-imagem"> </div>
+        <div class="img">  <img class="imagem-produto" src="https://static.bemol.com.br/pages/farma/conteudo-especial/daaz/6023212/assets/imagens/retrato-de-uma-linda-mulher-sorridente-com-pele-limpa.jpg" alt="segunda-imagem"> </div>
         <div class="texto"> <p>A Vitamina C promove luminosidade e firmeza, enquanto o Ácido Hialurônico mantém a pele suave e elástica. 
             Mime sua pele com essa fórmula luxuosa e protetora, proporcionando uma pele visivelmente mais radiante e saudável.</p> </div>
     </section>
         <hr>
     <section class="bottom">
-        <img src="/assets/imagens/mulher-de-close-up-com-creme-para-o-rosto-e-copia-espaco.jpg" alt="mulher usando creme">
-        <img class="imagem-sobreposta" src="/assets/imagens/creme-2.jpg" alt="segunda-imagem">
+        <img src="https://static.bemol.com.br/pages/farma/conteudo-especial/daaz/6023212/assets/imagens/mulher-de-close-up-com-creme-para-o-rosto-e-copia-espaco.jpg" alt="mulher usando creme">
+        <img class="imagem-sobreposta" src="https://static.bemol.com.br/pages/farma/conteudo-especial/daaz/6023212/assets/imagens/creme-2.jpg" alt="segunda-imagem">
     </section>
 
         </div>
